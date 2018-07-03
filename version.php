@@ -16,6 +16,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2018070300;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires = 2017110800;        // Requires this Moodle version
-$plugin->component = 'filter_linklight'; // Full name of the plugin (used for diagnostics)
+$plugin->version = 2018070300;
+$plugin->requires = 2017110800;
+$plugin->component = 'filter_linklight';

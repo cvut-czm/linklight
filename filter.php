@@ -36,8 +36,8 @@ class filter_linklight extends moodle_text_filter {
         global $CFG;
         $matches = [];
         preg_match_all('/<a[^\>]*>/', $text, $matches, PREG_OFFSET_CAPTURE);
-        for ($i = count($matches[0]) - 1; $i >= 0; $i--) // We need to go from end. Otherwise we would break positioning
-        {
+        // We need to go from end. Otherwise we would break positioning.
+        for ($i = count($matches[0]) - 1; $i >= 0; $i--) {
             $match = $matches[0][$i];
             if (count($match) == 0) {
                 continue;
@@ -54,15 +54,15 @@ class filter_linklight extends moodle_text_filter {
         return $text;
     }
 
-    private function external_link(string $text, int $before_a, int $a_length) {
-        $text = substr($text, 0, $before_a) . "&nbsp;" . substr($text, $before_a, $a_length) . "<i class='fa fa-globe'></i>" .
-                substr($text, $before_a + $a_length);
+    private function external_link(string $text, int $before, int $length) {
+        $text = substr($text, 0, $before) . "&nbsp;" . substr($text, $before, $length) . "<i class='fa fa-globe'></i>" .
+                substr($text, $before + $length);
         return $text;
     }
 
-    private function internal_link(string $text, int $before_a, int $a_length) {
-        $text = substr($text, 0, $before_a) . "&nbsp;" . substr($text, $before_a, $a_length) . "<i class='fa fa-link'></i>&nbsp;" .
-                substr($text, $before_a + $a_length);
+    private function internal_link(string $text, int $before, int $length) {
+        $text = substr($text, 0, $before) . "&nbsp;" . substr($text, $before, $length) . "<i class='fa fa-link'></i>&nbsp;" .
+                substr($text, $before + $length);
         return $text;
     }
 }
