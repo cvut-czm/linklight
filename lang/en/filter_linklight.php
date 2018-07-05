@@ -16,6 +16,17 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['filtername'] = 'Add icons to links in texts.';
-
+$string['filtername'] = 'Linklight';
 $string['privacy:metadata'] = 'This plugin does not use any private information.';
+
+$string['internal_link_icon'] = 'Internal links';
+$string['internal_link_icon_desc'] =
+        '<ul><li>Icon for highlighting internal links</li>' .
+        '<li>Icon is placed before link</li><li>Leave empty if no icon should be displayed</li>'.
+        '<li>Icon galery: <a href="https://fontawesome.com/icons?d=gallery">Font awesome</a></li></ul>';
+$string['external_link_icon'] = 'External links';
+$string['external_link_icon_desc'] =
+        '<ul><li>Icon for highlighting external links</li>' .
+        '<li>Icon is placed before link</li><li>Leave empty if no icon should be displayed</li>'.
+        '<li>Icon galery: <a href="https://fontawesome.com/icons?d=gallery">Font awesome</a></li></ul>';
+
