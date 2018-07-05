@@ -55,18 +55,20 @@ class filter_linklight extends moodle_text_filter {
     }
 
     private function external_link(string $text, int $before, int $length) {
-        $icon=get_config('filter_linklight','external_icon');
-        if($icon==null || $icon=='')
+        $icon = get_config('filter_linklight', 'external_icon');
+        if ($icon == null || $icon == '') {
             return $text;
+        }
         $text = substr($text, 0, $before) . "&nbsp;" . substr($text, $before, $length) . "<i class='fa fa-{$icon}'></i>" .
                 substr($text, $before + $length);
         return $text;
     }
 
     private function internal_link(string $text, int $before, int $length) {
-        $icon=get_config('filter_linklight','internal_icon');
-        if($icon==null || $icon=='')
+        $icon = get_config('filter_linklight', 'internal_icon');
+        if ($icon == null || $icon == '') {
             return $text;
+        }
         $text = substr($text, 0, $before) . "&nbsp;" . substr($text, $before, $length) . "<i class='fa fa-{$icon}'></i>&nbsp;" .
                 substr($text, $before + $length);
         return $text;

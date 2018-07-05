@@ -18,14 +18,14 @@ defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext('filter_linklight/internal_icon',
-            new lang_string('internal_link_icon','filter_linklight'),
-            new lang_string('internal_link_icon_desc','filter_linklight'),
-            'link',PARAM_ALPHANUMEXT);
+            new lang_string('internal_link_icon', 'filter_linklight'),
+            new lang_string('internal_link_icon_desc', 'filter_linklight'),
+            'link', PARAM_ALPHANUMEXT);
     $settings->add($setting);
     $setting = new admin_setting_configtext('filter_linklight/external_icon',
-            new lang_string('external_link_icon','filter_linklight'),
-            new lang_string('external_link_icon_desc','filter_linklight'),
-            'globe',PARAM_ALPHANUMEXT);
+            new lang_string('external_link_icon', 'filter_linklight'),
+            new lang_string('external_link_icon_desc', 'filter_linklight'),
+            'globe', PARAM_ALPHANUMEXT);
     $settings->add($setting);
 
 }
