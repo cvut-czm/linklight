@@ -32,6 +32,8 @@ class linklight_filter_local_settings_form extends filter_local_settings_form {
 
     protected function definition_inner($mform) {
         $mform->addElement('text', 'internal_links', get_string('internal_link_icon', 'filter_linklight'), ['size' => 20]);
-        $mform->setType('word', PARAM_ALPHANUMEXT);
+        $mform->setType('internal_links', PARAM_ALPHANUMEXT);
+        $mform->addElement('text', 'external_links', get_string('external_link_icon', 'filter_linklight'), ['size' => 20]);
+        $mform->setType('external_links', PARAM_ALPHANUMEXT);
     }
 }

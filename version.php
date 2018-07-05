@@ -16,6 +16,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2018070300;
+$plugin->version = 2018070502;
 $plugin->requires = 2017110800;
+$plugin->maturity = MATURITY_BETA;
+$plugin->release = 'v0.2-beta';
 $plugin->component = 'filter_linklight';
